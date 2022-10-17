@@ -5,6 +5,7 @@ genie:
   gene_panels_folder: 'gene_panels'
   processed_data: 'data/genie_processed/'
   dataset_path: 'data/'
+  targets: ['NF1', 'NF2']
   files:
     clinical_patient:
       file_name: 'data_clinical_patient_13.3-consortium.txt'
@@ -24,4 +25,4 @@ genie:
     clinical_sample:
       file_name: 'clinical_sample.csv'
     mutations_extended:
-      file_name: 'mutations_processed.csv'
+      file_name: 'mutations_extended.csv'

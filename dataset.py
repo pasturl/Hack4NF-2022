@@ -14,7 +14,7 @@ def load_genie_processed_data(genie):
     for genie_file in genie["processed_files"]:
         filename = genie["processed_files"][genie_file]["file_name"]
 
-        genie_processed_data[genie_file] = pd.read_csv(f"{genie_processed_path}/{filename}",
+        genie_processed_data[genie_file] = pd.read_csv(f"{genie_processed_path}{filename}",
                                                        sep=";")
     return genie_processed_data
 
@@ -40,8 +40,12 @@ def save_dataset(genie, df):
 
 
 def create_dataset(genie):
-    genie_processed = {}
-    genie_processed = load_genie_processed_data(genie)
-    dataset = join_processed_data(genie_processed)
-    save_dataset(genie, dataset)
+    dataset_file = f"{genie['dataset_path']}/dataset.csv"
+    if os.path.isfile(dataset_file):
+        dataset = pd.read_csv(dataset_file, sep=";")
+    else:
+        genie_processed = {}
+        genie_processed = load_genie_processed_data(genie)
+        dataset = join_processed_data(genie_processed)
+        save_dataset(genie, dataset)
     return dataset

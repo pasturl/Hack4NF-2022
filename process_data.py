@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import logging
 import os
+import pickle
 
 from utils import create_folder
 
@@ -97,13 +98,23 @@ def process_mutations_variants(df_mutation):
     df_mut_process = df_mut_process.sort_values("SAMPLE_ID")
     # This group by generate a memory error
     # So the groupby is done by chunk
-    # df_mut_process = df_mut_process.groupby("SAMPLE_ID").max()
-    col_group = "SAMPLE_ID"
-    n_rows = 100000
-    df_mut_process = group_by_chunk(df_mut_process, col_group, n_rows)
+    df_mut_process = df_mut_process.groupby("SAMPLE_ID", observed=True).max()
+    # col_group = "SAMPLE_ID"
+    # n_rows = 100000
+    # df_mut_process = group_by_chunk(df_mut_process, col_group, n_rows)
 
     df_mut_process.reset_index(inplace=True)
+    save_mutations_columns(df_mut_process)
+
     return df_mut_process
+
+
+def save_mutations_columns(df):
+    mutation_cols = list(df.columns)
+    mutation_cols.pop(0)
+    with open('data/genie_mutations_features.txt', 'w') as f:
+        for mutation in mutation_cols:
+            f.write(f"{mutation}\n")
 
 
 def process_mutations(df_mutation):
@@ -113,6 +124,8 @@ def process_mutations(df_mutation):
     df_mut_process = df_mut_process.rename(columns={"Tumor_Sample_Barcode": "SAMPLE_ID"})
     df_mut_process = df_mut_process.groupby("SAMPLE_ID").max()
     df_mut_process.reset_index(inplace=True)
+    save_mutations_columns(df_mut_process)
+
     return df_mut_process
 
 
@@ -138,7 +151,8 @@ def process_genie_data(genie):
         genie_process["clinical_sample"] = process_clinical_sample(genie_data["clinical_sample"])
 
         log.info('Processing mutations data')
-        genie_process["mutations_processed"] = process_mutations(genie_data["mutations_extended"])
+        genie_process["mutations_extended"] = process_mutations_variants(genie_data["mutations_extended"])
+        # genie_process["mutations_extended"] = process_mutations(genie_data["mutations_extended"])
 
         log.info('Saving Genie processed data')
         save_process_data(genie, genie_process)
