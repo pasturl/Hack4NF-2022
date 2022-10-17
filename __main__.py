@@ -2,6 +2,7 @@ import logging
 
 from download_data import download_genie
 from process_data import process_genie_data
+from dataset import create_dataset
 
 from utils import read_yaml
 
@@ -27,4 +28,4 @@ if __name__ == "__main__":
     log.info('Processing data')
     process_genie_data(genie)
     log.info('Creating dataset')
-    #create_dataset(genie)
+    dataset = create_dataset(genie)

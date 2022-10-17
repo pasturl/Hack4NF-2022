@@ -138,7 +138,7 @@ def process_genie_data(genie):
         genie_process["clinical_sample"] = process_clinical_sample(genie_data["clinical_sample"])
 
         log.info('Processing mutations data')
-        #genie_process["mutations_processed"] = process_mutations(genie_data["mutations_extended"])
+        genie_process["mutations_processed"] = process_mutations(genie_data["mutations_extended"])
 
         log.info('Saving Genie processed data')
         save_process_data(genie, genie_process)

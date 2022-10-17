@@ -1,9 +1,10 @@
 genie:
   synapses_id: 'syn36709873'
   data_path: 'data/genie_v13.3/'
-  processed_data: 'data/genie_processed/'
   case_list_folder: 'case_list'
   gene_panels_folder: 'gene_panels'
+  processed_data: 'data/genie_processed/'
+  dataset_path: 'data/'
   files:
     clinical_patient:
       file_name: 'data_clinical_patient_13.3-consortium.txt'
@@ -19,8 +20,8 @@ genie:
       file_name: 'data_mutations_extended_13.3-consortium.txt'
   processed_files:
     clinical_patient:
-      filename: 'clinical_patient.csv'
+      file_name: 'clinical_patient.csv'
     clinical_sample:
-      filename: 'clinical_sample.csv'
+      file_name: 'clinical_sample.csv'
     mutations_extended:
-      filename: 'mutations_processed.csv'
+      file_name: 'mutations_processed.csv'
