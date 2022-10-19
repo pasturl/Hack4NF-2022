@@ -16,9 +16,6 @@ log = logging.getLogger(__name__)
 
 def plot_roc_curve(y_test, y_pred, model_path):
     # Compute ROC curve and ROC area for each class
-    fpr = []
-    tpr = []
-    roc_auc = []
     fpr, tpr, _ = metrics.roc_curve(y_test, y_pred)
     roc_auc = metrics.auc(fpr, tpr)
     plt.figure()
@@ -77,16 +74,23 @@ def model_interpretability(model_gbm, X_test, model_path):
     df_importances_shap["feature"] = features_shap
     df_importances_shap["shap_value"] = shap_values_class_1
     df_importances_shap.sort_values("shap_value", inplace=True, ascending=False)
-    df_importances_shap.to_csv(f'{model_path}/feature_importance_shap_lgb.csv', sep=";")
+    df_importances_shap.to_csv(f'{model_path}/feature_importance_shap_lgb.csv', sep=";", index=False)
 
 
 def train_model(genie, ds, target):
-    model_path = f"model_{target}"
+    model_path = f"{genie['models_path']}model_{target}"
     create_folder(model_path)
     ds = ds.fillna(0)
+    # TODO parametrize path
     with open('data/genie_mutations_features.txt') as f:
         mutation_cols = f.read().splitlines()
     features = set(mutation_cols) - set([target])
+    features = list(features)
+
+    # TODO parametrize path
+    with open('data/genie_cancer_types_features.txt') as f:
+        cancer_types_cols = f.read().splitlines()
+    features = set(features) - set(cancer_types_cols)
     features = list(features)
 
     X_train, X_test, y_train, y_test = train_test_split(ds[features], ds[target],

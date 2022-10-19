@@ -33,6 +33,11 @@ if __name__ == "__main__":
     log.info('Creating dataset')
     dataset = create_dataset(genie)
 
-    log.info('Trainning ML supervised model')
-    for target in genie["targets"]:
-        model_lgb = train_model(genie, dataset, target)
+    log.info('Filter out Na in target columns')
+    # TODO Analyze mutations informed by each study and clean in origin
+    dataset = dataset.dropna(subset=genie["targets"])
+
+    if 'binary_classification' in genie["training_mode"]:
+        log.info('Trainning ML supervised model binary classification')
+        for target in genie["targets"]:
+            model_lgb = train_model(genie, dataset, target)

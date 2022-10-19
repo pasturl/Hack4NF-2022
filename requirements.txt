@@ -3,4 +3,5 @@ synapseclient
 configpaser
 sklearn
 lightgbm
+xgboost
 matplotlib

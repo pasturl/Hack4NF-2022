@@ -5,7 +5,9 @@ genie:
   gene_panels_folder: 'gene_panels'
   processed_data: 'data/genie_processed/'
   dataset_path: 'data/'
-  targets: ['NF1', 'NF2']
+  models_path: 'models/'
+  training_mode: 'binary_classification'
+  targets: ['Peripheral Nervous System']
   files:
     clinical_patient:
       file_name: 'data_clinical_patient_13.3-consortium.txt'
@@ -24,5 +26,7 @@ genie:
       file_name: 'clinical_patient.csv'
     clinical_sample:
       file_name: 'clinical_sample.csv'
+    patient_cancer_types:
+      file_name: 'patient_cancer_types.csv'
     mutations_extended:
       file_name: 'mutations_extended.csv'
