@@ -281,3 +281,27 @@ WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be r
 
 WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
 
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
