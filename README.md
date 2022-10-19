@@ -96,7 +96,7 @@ Two approach are proposed:
 2. Process data: 
     * Input -> structured csv files
     * Output -> transformed data with PK id and all features
-      from different files (clinical, samples, mutations variations)
+      from different files (clinical, samples, mutations variations, cancer types)
 3. Create dataset
     * Input ->  transformed data with PK
     * Output -> unique dataframe with selected features and filtered data
