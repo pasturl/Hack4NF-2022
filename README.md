@@ -48,6 +48,14 @@ Two approach are proposed:
    with NF1, NF2, SMARCB1 and LZTR1.This trained model could be used as base 
    to predict cancer types using transfer learning.
 
+
+# References
+* https://www.mskcc.org/cancer-care/types/neurofibromatosis/neurofibromatosis-type-1-nf1
+* https://www.mayoclinic.org/es-es/diseases-conditions/neurofibromatosis/symptoms-causes/syc-20350490
+* https://www.nhs.uk/conditions/neurofibromatosis-type-1/
+* https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0034-1382021
+* https://pubmed.ncbi.nlm.nih.gov/25062113/
+
 # Project Log
 
 ## TODO 2022-10-18
@@ -96,13 +104,13 @@ Two approach are proposed:
 2. Process data: 
     * Input -> structured csv files
     * Output -> transformed data with PK id and all features
-      from different files (clinical, samples, mutations variations)
+      from different files (clinical, samples, mutations variations, patient cancer types)
 3. Create dataset
     * Input ->  transformed data with PK
-    * Output -> unique dataframe with selected features and filtered data
+    * Output -> unique dataframe with selected features and targets
 4. Lightgbm model
-    * Input ->  unique dataframe with selected features and filtered data
-    * Output -> trained model, evaluation metrics, model interpretability plots
+    * Input ->  dataset with selected features and targets
+    * Output -> trained a model with binary classification for each target, evaluation metrics, model interpretability plots
 
 ## DONE 2022-10-14
 * Exploratory Data Analyses with genie v12:
@@ -119,9 +127,3 @@ Two approach are proposed:
     'http://marrvel.org/data/omim/gene/symbol/{gene}'.
   * Output -> topics, key words by topic, tree of topics.
 
-
-# References
-* https://www.mayoclinic.org/es-es/diseases-conditions/neurofibromatosis/symptoms-causes/syc-20350490
-* https://www.nhs.uk/conditions/neurofibromatosis-type-1/
-* https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0034-1382021
-* https://pubmed.ncbi.nlm.nih.gov/25062113/

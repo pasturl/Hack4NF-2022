@@ -7,7 +7,33 @@ genie:
   dataset_path: 'data/'
   models_path: 'models/'
   training_mode: 'binary_classification'
-  targets: ['Peripheral Nervous System']
+  targets: ['Adrenal Gland Cancer',
+            'Bladder Cancer',
+            'Breast Cancer',
+            'Cancer of Unknown Primary',
+            'CNS Cancer',
+            'CNS/Brain Cancer',
+            'Colorectal Cancer',
+            'Endometrial Cancer',
+            'Glioma',
+            'Head and Neck Cancer',
+            'Gastrointestinal Stromal Tumor',
+            'Infantile Fibrosarcoma',
+            'Leukemia',
+            'Melanoma',
+            'Mesothelioma',
+            'Nerve Sheath Tumor',
+            'Non-Small Cell Lung Cancer',
+            'Pancreatic Cancer',
+            'Pineal Tumor',
+            'Peripheral Nervous System',
+            'Renal Cell Carcinoma',
+            'Salivary Gland Cancer',
+            'Skin Cancer',
+            'Skin Cancer, Non-Melanoma',
+            'Small Bowel Cancer',
+            'UNKNOWN',
+            'Wilms Tumor']
   files:
     clinical_patient:
       file_name: 'data_clinical_patient_13.3-consortium.txt'

@@ -7,7 +7,7 @@ from ml_model import train_model
 
 from utils import read_yaml
 
-logging.basicConfig()
+logging.basicConfig(filename="LOG.txt")
 logging.root.setLevel(logging.INFO)
 log = logging.getLogger('Hack4NF')
 
