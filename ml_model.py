@@ -8,15 +8,13 @@ import graphviz
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import os
 from utils import create_folder
 
 log = logging.getLogger(__name__)
 
 
-def plot_roc_curve(y_test, y_pred, model_path):
-    # Compute ROC curve and ROC area for each class
-    fpr, tpr, _ = metrics.roc_curve(y_test, y_pred)
-    roc_auc = metrics.auc(fpr, tpr)
+def plot_roc_curve(fpr, tpr, roc_auc, model_path, split_set):
     plt.figure()
     lw = 2
     plt.plot(
@@ -33,25 +31,41 @@ def plot_roc_curve(y_test, y_pred, model_path):
     plt.ylabel("True Positive Rate")
     plt.title("AUC ROC curve")
     plt.legend(loc="lower right")
-    plt.savefig(f'{model_path}/model_lgb_auc.png', dpi=150)
+    plt.savefig(f'{model_path}/model_lgb_{split_set}_auc.png', dpi=150)
 
 
-def evaluate_model(model, X_test, y_test, model_path):
-    y_pred = model.predict(X_test)
+def evaluate_model(model, X_data, y_data, model_path, genie, target, split_set):
+    y_pred = model.predict(X_data)
     threshold = 0.5
     predictions = [1 if case > threshold else 0 for case in y_pred]
 
-    log.info('Evaluating model')
-    accuracy = metrics.accuracy_score(y_test, predictions)
-    precision = metrics.precision_score(y_test, predictions, average='macro')
-    recall = metrics.recall_score(y_test, predictions, average='macro')
-    classification_report = metrics.classification_report(y_test, predictions)
+    log.info(f'Evaluating model {split_set}')
+    accuracy = metrics.accuracy_score(y_data, predictions)
+    precision = metrics.precision_score(y_data, predictions, average='macro')
+    recall = metrics.recall_score(y_data, predictions, average='macro')
+    classification_report = metrics.classification_report(y_data, predictions)
+    # Compute ROC curve and ROC area for each class
+    fpr, tpr, _ = metrics.roc_curve(y_data, y_pred)
+    roc_auc = metrics.auc(fpr, tpr)
+    plot_roc_curve(fpr, tpr, roc_auc, model_path, split_set)
+
+    log.info(f'AUC: {roc_auc}')
     log.info(f'Overall Accuracy: {accuracy}')
     log.info(f'Overall Precision: {precision}')
     log.info(f'Overall Recall: {recall}')
     log.info(f'Classification report: {classification_report}')
 
-    plot_roc_curve(y_test, y_pred, model_path)
+    log.info('Saving metrics')
+    if os.path.isfile(genie["models_metrics_file"]):
+        with open(genie["models_metrics_file"], "a") as fwrite:
+            new_line = f"{target};{split_set};{roc_auc};{accuracy};{precision};{recall};\n"
+            fwrite.write(new_line)
+    else:
+        with open(genie["models_metrics_file"], "w") as fwrite:
+            new_line = f"target;split_set;roc_auc;accuracy;precision;recall\n"
+            fwrite.write(new_line)
+            new_line = f"{target};{split_set};{roc_auc};{accuracy};{precision};{recall}\n"
+            fwrite.write(new_line)
 
 
 def model_interpretability(model_gbm, X_test, model_path):
@@ -94,11 +108,22 @@ def train_model(genie, ds, target):
     features = set(features) - set(cancer_types_cols)
     features = list(features)
 
-    X_train, X_test, y_train, y_test = train_test_split(ds[features], ds[target],
+    features = features + genie['categorical_features']
+    features = features + ['AGE_CONTACT']
+
+    ds["PRIMARY_RACE"] = ds["PRIMARY_RACE"].astype('category')
+    ds["SEX"] = ds["SEX"].apply(lambda x: 1 if x == "Female" else 0)
+
+    X_trainable, X_test, y_trainable, y_test = train_test_split(ds[features], ds[target],
+                                                        test_size=0.10, random_state=42)
+
+    X_train, X_validation, y_train, y_validation = train_test_split(X_trainable, y_trainable,
                                                         test_size=0.20, random_state=42)
 
-    train_data = lgb.Dataset(X_train, label=y_train)
-    test_data = lgb.Dataset(X_test, label=y_test)
+    train_data = lgb.Dataset(X_train, label=y_train,
+                             categorical_feature=genie['categorical_features'])
+    validation_data = lgb.Dataset(X_validation, label=y_validation,
+                            categorical_feature=genie['categorical_features'])
 
     params_k = {
         'boosting_type': 'gbdt',
@@ -113,12 +138,14 @@ def train_model(genie, ds, target):
         'boost_from_average': False,
         "random_seed": 42}
 
-    model_gbm = lgb.train(params_k, train_data, valid_sets=[test_data],
+    model_gbm = lgb.train(params_k, train_data, valid_sets=[validation_data],
                           num_boost_round=5000, early_stopping_rounds=25,
                           verbose_eval=50)
     joblib.dump(model_gbm, f'{model_path}/model_lgb.pkl')
 
-    evaluate_model(model_gbm, X_test, y_test, model_path)
+    evaluate_model(model_gbm, X_validation, y_validation, model_path, genie, target, "validation")
+
+    evaluate_model(model_gbm, X_test, y_test, model_path, genie, target, "test")
 
     model_interpretability(model_gbm, X_test, model_path)
 

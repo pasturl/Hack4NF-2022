@@ -7,6 +7,7 @@ genie:
   dataset_path: 'data/'
   models_path: 'models/'
   training_mode: 'binary_classification'
+  categorical_features: ['PRIMARY_RACE']
   targets: ['Adrenal Gland Cancer',
             'Bladder Cancer',
             'Breast Cancer',
