@@ -4,10 +4,13 @@ from download_data import download_genie
 from process_data import process_genie_data
 from dataset import create_dataset
 from ml_model import train_model
-
 from utils import read_yaml
+import time
 
-logging.basicConfig(filename="LOG.txt")
+# Get timestamp
+ts = time.time()
+
+logging.basicConfig(filename=f"logs/LOG_{ts}.txt")
 logging.root.setLevel(logging.INFO)
 log = logging.getLogger('Hack4NF')
 
@@ -39,5 +42,12 @@ if __name__ == "__main__":
 
     if 'binary_classification' in genie["training_mode"]:
         log.info('Trainning ML supervised model binary classification')
-        for target in genie["targets"]:
-            model_lgb = train_model(genie, dataset, target)
+        # Execute all cancer types if targets contains "All"
+        if "All" in genie["targets"]:
+            with open('data/genie_cancer_types_features.txt') as f:
+                cancer_types_cols = f.read().splitlines()
+            for target in cancer_types_cols:
+                model_lgb = train_model(genie, dataset, target)
+        else:
+            for target in genie["targets"]:
+                model_lgb = train_model(genie, dataset, target)

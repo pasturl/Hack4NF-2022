@@ -10,7 +10,6 @@ import numpy as np
 import pandas as pd
 from utils import create_folder
 
-
 log = logging.getLogger(__name__)
 
 
@@ -56,10 +55,12 @@ def evaluate_model(model, X_test, y_test, model_path):
 
 
 def model_interpretability(model_gbm, X_test, model_path):
-    tree_to_plot = 0
-    tree = lgb.create_tree_digraph(model_gbm, orientation="vertical", tree_index=tree_to_plot)
-    graphviz.Source(tree.source, filename=f'{model_path}/tree_{tree_to_plot}.gv', format="png")
-
+    try:
+        tree_to_plot = 0
+        tree = lgb.create_tree_digraph(model_gbm, orientation="vertical", tree_index=tree_to_plot)
+        graphviz.Source(tree.source, filename=f'{model_path}/tree_{tree_to_plot}.gv', format="png")
+    except:
+        log.info('Error creating tree diagraph')
     shap_values = shap.TreeExplainer(model_gbm).shap_values(X_test)
     class_selected = 1
     log.info(f'Feature importance of class: {class_selected}')

@@ -1,0 +1,2824 @@
+Reading config files
+Downloading data
+Processing data
+INFO:Hack4NF:Reading config files
+INFO:Hack4NF:Downloading data
+INFO:download_data:Genie folder already created, skipping download step
+INFO:Hack4NF:Processing data
+INFO:process_data:Loading Genie raw data
+WARNING:py.warnings:Columns (4,12,17,18,19,54) have mixed types. Specify dtype option on import or set low_memory=False.
+
+INFO:process_data:Processing clinical patient data
+INFO:process_data:Genie clinical_patient already created, skipping step
+INFO:process_data:Processing clinical sample data
+INFO:process_data:Genie clinical_sample already created, skipping step
+INFO:process_data:Processing clinical sample data to create patient_cancer_types
+INFO:process_data:Genie patient_cancer_types already created, skipping step
+INFO:process_data:Processing mutations data
+INFO:process_data:Genie mutations_extended already created, skipping step
+INFO:process_data:Saving Genie processed data
+INFO:process_data:Saving Genie clinical_patient
+INFO:process_data:Saving Genie clinical_sample
+INFO:process_data:Saving Genie patient_cancer_types
+INFO:process_data:Saving Genie mutations_extended
+INFO:Hack4NF:Creating dataset
+INFO:dataset:Reading dataset from: data//dataset.csv
+WARNING:py.warnings:Columns (3,4,8,9,11) have mixed types. Specify dtype option on import or set low_memory=False.
+
+INFO:Hack4NF:Filter out Na in target columns
+INFO:Hack4NF:Trainning ML supervised model binary classification
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+INFO:Hack4NF:Reading config files
+INFO:Hack4NF:Downloading data
+INFO:download_data:Genie folder already created, skipping download step
+INFO:Hack4NF:Processing data
+INFO:process_data:Loading Genie raw data
+WARNING:py.warnings:Columns (4,12,17,18,19,54) have mixed types. Specify dtype option on import or set low_memory=False.
+
+INFO:process_data:Processing clinical patient data
+INFO:process_data:Genie clinical_patient already created, skipping step
+INFO:process_data:Processing clinical sample data
+INFO:process_data:Genie clinical_sample already created, skipping step
+INFO:process_data:Processing clinical sample data to create patient_cancer_types
+INFO:process_data:Genie patient_cancer_types already created, skipping step
+INFO:process_data:Processing mutations data
+INFO:process_data:Genie mutations_extended already created, skipping step
+INFO:process_data:Saving Genie processed data
+INFO:process_data:Saving Genie clinical_patient
+INFO:process_data:Saving Genie clinical_sample
+INFO:process_data:Saving Genie patient_cancer_types
+INFO:process_data:Saving Genie mutations_extended
+INFO:Hack4NF:Creating dataset
+INFO:dataset:Reading dataset from: data//dataset.csv
+WARNING:py.warnings:Columns (3,4,8,9,11) have mixed types. Specify dtype option on import or set low_memory=False.
+
+INFO:Hack4NF:Filter out Na in target columns
+INFO:Hack4NF:Trainning ML supervised model binary classification
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+INFO:ml_model:Error creating tree diagraph
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.999795312659912
+INFO:ml_model:Overall Precision: 0.499897656329956
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29307
+           1       0.00      0.00      0.00         6
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9982260430525706
+INFO:ml_model:Overall Precision: 0.4991130215262853
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29261
+           1       0.00      0.00      0.00        52
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9969638044553611
+INFO:ml_model:Overall Precision: 0.4984819022276806
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29224
+           1       0.00      0.00      0.00        89
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9974072936922185
+INFO:ml_model:Overall Precision: 0.49870364684610924
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29237
+           1       0.00      0.00      0.00        76
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9998635417732746
+INFO:ml_model:Overall Precision: 0.4999317708866373
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29309
+           1       0.00      0.00      0.00         4
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9951216183945689
+INFO:ml_model:Overall Precision: 0.6226116551229998
+INFO:ml_model:Overall Recall: 0.5034946801217139
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29172
+           1       0.25      0.01      0.01       141
+
+    accuracy                           1.00     29313
+   macro avg       0.62      0.50      0.51     29313
+weighted avg       0.99      1.00      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9947463582710743
+INFO:ml_model:Overall Precision: 0.9973730895196506
+INFO:ml_model:Overall Recall: 0.5032258064516129
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29158
+           1       1.00      0.01      0.01       155
+
+    accuracy                           0.99     29313
+   macro avg       1.00      0.50      0.51     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9826015760925186
+INFO:ml_model:Overall Precision: 0.924949549234217
+INFO:ml_model:Overall Recall: 0.715470841101239
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99     28509
+           1       0.87      0.43      0.58       804
+
+    accuracy                           0.98     29313
+   macro avg       0.92      0.72      0.78     29313
+weighted avg       0.98      0.98      0.98     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9996929689898679
+INFO:ml_model:Overall Precision: 0.49986353711790393
+INFO:ml_model:Overall Recall: 0.4999829380651766
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29305
+           1       0.00      0.00      0.00         8
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9889127690785658
+INFO:ml_model:Overall Precision: 0.7445064319104651
+INFO:ml_model:Overall Recall: 0.504563639065502
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99     28988
+           1       0.50      0.01      0.02       325
+
+    accuracy                           0.99     29313
+   macro avg       0.74      0.50      0.51     29313
+weighted avg       0.98      0.99      0.98     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9933135468904581
+INFO:ml_model:Overall Precision: 0.49665677344522907
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29117
+           1       0.00      0.00      0.00       196
+
+    accuracy                           0.99     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9335107290280763
+INFO:ml_model:Overall Precision: 0.8688427137083679
+INFO:ml_model:Overall Recall: 0.713712134485287
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.94      0.99      0.96     26416
+           1       0.80      0.44      0.57      2897
+
+    accuracy                           0.93     29313
+   macro avg       0.87      0.71      0.77     29313
+weighted avg       0.93      0.93      0.92     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.999385937979736
+INFO:ml_model:Overall Precision: 0.9996929585152838
+INFO:ml_model:Overall Recall: 0.5263157894736842
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29294
+           1       1.00      0.05      0.10        19
+
+    accuracy                           1.00     29313
+   macro avg       1.00      0.53      0.55     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9939276089107222
+INFO:ml_model:Overall Precision: 0.8542069019332437
+INFO:ml_model:Overall Recall: 0.5400039511163189
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29126
+           1       0.71      0.08      0.14       187
+
+    accuracy                           0.99     29313
+   macro avg       0.85      0.54      0.57     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9654419540818067
+INFO:ml_model:Overall Precision: 0.5542477893361671
+INFO:ml_model:Overall Recall: 0.5003900434047494
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     28305
+           1       0.14      0.00      0.00      1008
+
+    accuracy                           0.97     29313
+   macro avg       0.55      0.50      0.49     29313
+weighted avg       0.94      0.97      0.95     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9941664108074916
+INFO:ml_model:Overall Precision: 0.4971001637554585
+INFO:ml_model:Overall Recall: 0.4999828432213568
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29143
+           1       0.00      0.00      0.00       170
+
+    accuracy                           0.99     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9992494797530106
+INFO:ml_model:Overall Precision: 0.4996247398765053
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29291
+           1       0.00      0.00      0.00        22
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9493739978848975
+INFO:ml_model:Overall Precision: 0.8974717237857412
+INFO:ml_model:Overall Recall: 0.7980488662600609
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97     26401
+           1       0.84      0.61      0.71      2912
+
+    accuracy                           0.95     29313
+   macro avg       0.90      0.80      0.84     29313
+weighted avg       0.95      0.95      0.95     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9967250025585918
+INFO:ml_model:Overall Precision: 0.9983624454148472
+INFO:ml_model:Overall Recall: 0.5051546391752577
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29216
+           1       1.00      0.01      0.02        97
+
+    accuracy                           1.00     29313
+   macro avg       1.00      0.51      0.51     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.977552621703681
+INFO:ml_model:Overall Precision: 0.898361336469086
+INFO:ml_model:Overall Recall: 0.7081203276926334
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99     28338
+           1       0.82      0.42      0.55       975
+
+    accuracy                           0.98     29313
+   macro avg       0.90      0.71      0.77     29313
+weighted avg       0.97      0.98      0.97     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9681711186163136
+INFO:ml_model:Overall Precision: 0.6241266158698882
+INFO:ml_model:Overall Recall: 0.5060187575563383
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     28399
+           1       0.28      0.01      0.03       914
+
+    accuracy                           0.97     29313
+   macro avg       0.62      0.51      0.50     29313
+weighted avg       0.95      0.97      0.95     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9955651076314264
+INFO:ml_model:Overall Precision: 0.4977825538157132
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29183
+           1       0.00      0.00      0.00       130
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      1.00      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9946099000443489
+INFO:ml_model:Overall Precision: 0.9159751534143346
+INFO:ml_model:Overall Recall: 0.7504958611121215
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29048
+           1       0.84      0.50      0.63       265
+
+    accuracy                           0.99     29313
+   macro avg       0.92      0.75      0.81     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9931770886637328
+INFO:ml_model:Overall Precision: 0.4965885443318664
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29113
+           1       0.00      0.00      0.00       200
+
+    accuracy                           0.99     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.999795312659912
+INFO:ml_model:Overall Precision: 0.499897656329956
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29307
+           1       0.00      0.00      0.00         6
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9570838876948794
+INFO:ml_model:Overall Precision: 0.8981620407421105
+INFO:ml_model:Overall Recall: 0.717489744396199
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.96      0.99      0.98     27366
+           1       0.83      0.44      0.58      1947
+
+    accuracy                           0.96     29313
+   macro avg       0.90      0.72      0.78     29313
+weighted avg       0.95      0.96      0.95     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9844778767099922
+INFO:ml_model:Overall Precision: 0.765048615980293
+INFO:ml_model:Overall Recall: 0.5064923132761731
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99     28857
+           1       0.55      0.01      0.03       456
+
+    accuracy                           0.98     29313
+   macro avg       0.77      0.51      0.51     29313
+weighted avg       0.98      0.98      0.98     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9785078292907584
+INFO:ml_model:Overall Precision: 0.8931758905894187
+INFO:ml_model:Overall Recall: 0.5161666616807645
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99     28667
+           1       0.81      0.03      0.06       646
+
+    accuracy                           0.98     29313
+   macro avg       0.89      0.52      0.53     29313
+weighted avg       0.97      0.98      0.97     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9974414082488998
+INFO:ml_model:Overall Precision: 0.7210278460278461
+INFO:ml_model:Overall Recall: 0.5269415247868683
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29239
+           1       0.44      0.05      0.10        74
+
+    accuracy                           1.00     29313
+   macro avg       0.72      0.53      0.55     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9991471360829666
+INFO:ml_model:Overall Precision: 0.4995906113537118
+INFO:ml_model:Overall Recall: 0.4999829287445799
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29289
+           1       0.00      0.00      0.00        24
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9818851704022106
+INFO:ml_model:Overall Precision: 0.8706705479271699
+INFO:ml_model:Overall Recall: 0.6523500812902712
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99     28642
+           1       0.76      0.31      0.44       671
+
+    accuracy                           0.98     29313
+   macro avg       0.87      0.65      0.71     29313
+weighted avg       0.98      0.98      0.98     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9998294272165933
+INFO:ml_model:Overall Precision: 0.49991471360829665
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29308
+           1       0.00      0.00      0.00         5
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9991471360829666
+INFO:ml_model:Overall Precision: 0.4995735680414833
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29288
+           1       0.00      0.00      0.00        25
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.5
+INFO:ml_model:Overall Recall: 0.49998294272165933
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+           1       0.00      0.00      0.00         0
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9997270835465493
+INFO:ml_model:Overall Precision: 0.9998635371179039
+INFO:ml_model:Overall Recall: 0.5555555555555556
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29304
+           1       1.00      0.11      0.20         9
+
+    accuracy                           1.00     29313
+   macro avg       1.00      0.56      0.60     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9798382970013305
+INFO:ml_model:Overall Precision: 0.9081772047900077
+INFO:ml_model:Overall Recall: 0.6763427666041287
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99     28487
+           1       0.83      0.35      0.50       826
+
+    accuracy                           0.98     29313
+   macro avg       0.91      0.68      0.74     29313
+weighted avg       0.98      0.98      0.98     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.996452086105141
+INFO:ml_model:Overall Precision: 0.8854404665642881
+INFO:ml_model:Overall Recall: 0.5990536578571283
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29192
+           1       0.77      0.20      0.32       121
+
+    accuracy                           1.00     29313
+   macro avg       0.89      0.60      0.66     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.999897656329956
+INFO:ml_model:Overall Precision: 0.499948828164978
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29310
+           1       0.00      0.00      0.00         3
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9687169515232149
+INFO:ml_model:Overall Precision: 0.8833029051744208
+INFO:ml_model:Overall Recall: 0.6972830127466383
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     28011
+           1       0.79      0.40      0.53      1302
+
+    accuracy                           0.97     29313
+   macro avg       0.88      0.70      0.76     29313
+weighted avg       0.96      0.97      0.96     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9942346399208543
+INFO:ml_model:Overall Precision: 0.8248714138354944
+INFO:ml_model:Overall Recall: 0.5531991716206809
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29135
+           1       0.66      0.11      0.18       178
+
+    accuracy                           0.99     29313
+   macro avg       0.82      0.55      0.59     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9980554702691639
+INFO:ml_model:Overall Precision: 0.49902773513458193
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29256
+           1       0.00      0.00      0.00        57
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.99897656329956
+INFO:ml_model:Overall Precision: 0.49948828164978
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29283
+           1       0.00      0.00      0.00        30
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9901750076757753
+INFO:ml_model:Overall Precision: 0.7200303918724406
+INFO:ml_model:Overall Recall: 0.5384042217810502
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29030
+           1       0.45      0.08      0.13       283
+
+    accuracy                           0.99     29313
+   macro avg       0.72      0.54      0.56     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9975096373622625
+INFO:ml_model:Overall Precision: 0.7845199910306031
+INFO:ml_model:Overall Recall: 0.5269757256829318
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29239
+           1       0.57      0.05      0.10        74
+
+    accuracy                           1.00     29313
+   macro avg       0.78      0.53      0.55     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9934500051171835
+INFO:ml_model:Overall Precision: 0.8696669436246625
+INFO:ml_model:Overall Recall: 0.765171237957504
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29018
+           1       0.74      0.53      0.62       295
+
+    accuracy                           0.99     29313
+   macro avg       0.87      0.77      0.81     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9975096373622625
+INFO:ml_model:Overall Precision: 0.7487717921599399
+INFO:ml_model:Overall Recall: 0.5068322152052921
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29240
+           1       0.50      0.01      0.03        73
+
+    accuracy                           1.00     29313
+   macro avg       0.75      0.51      0.51     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9995565107631427
+INFO:ml_model:Overall Precision: 0.49977825538157133
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29300
+           1       0.00      0.00      0.00        13
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.8974857571725855
+INFO:ml_model:Overall Precision: 0.8521372908568441
+INFO:ml_model:Overall Recall: 0.6940761657224582
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94     24998
+           1       0.80      0.41      0.54      4315
+
+    accuracy                           0.90     29313
+   macro avg       0.85      0.69      0.74     29313
+weighted avg       0.89      0.90      0.88     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9975437519189438
+INFO:ml_model:Overall Precision: 0.4987718759594719
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29241
+           1       0.00      0.00      0.00        72
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.961416436393409
+INFO:ml_model:Overall Precision: 0.7889393133729592
+INFO:ml_model:Overall Recall: 0.5236841287596321
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.96      1.00      0.98     28161
+           1       0.62      0.05      0.09      1152
+
+    accuracy                           0.96     29313
+   macro avg       0.79      0.52      0.54     29313
+weighted avg       0.95      0.96      0.95     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9998294272165933
+INFO:ml_model:Overall Precision: 0.4999658819515524
+INFO:ml_model:Overall Recall: 0.49994882467333085
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9629174768873878
+INFO:ml_model:Overall Precision: 0.7982343861762602
+INFO:ml_model:Overall Recall: 0.70990619053084
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.97      0.99      0.98     28003
+           1       0.62      0.43      0.51      1310
+
+    accuracy                           0.96     29313
+   macro avg       0.80      0.71      0.75     29313
+weighted avg       0.96      0.96      0.96     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9996247398765054
+INFO:ml_model:Overall Precision: 0.4998123699382527
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29302
+           1       0.00      0.00      0.00        11
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9967591171152731
+INFO:ml_model:Overall Precision: 0.49837955855763655
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29218
+           1       0.00      0.00      0.00        95
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.999897656329956
+INFO:ml_model:Overall Precision: 0.499948828164978
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29310
+           1       0.00      0.00      0.00         3
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9994541670930986
+INFO:ml_model:Overall Precision: 0.4997270835465493
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29297
+           1       0.00      0.00      0.00        16
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9995565107631427
+INFO:ml_model:Overall Precision: 0.49979530567685587
+INFO:ml_model:Overall Recall: 0.4999829357359817
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29301
+           1       0.00      0.00      0.00        12
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9998635417732746
+INFO:ml_model:Overall Precision: 0.4999317708866373
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29309
+           1       0.00      0.00      0.00         4
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.999897656329956
+INFO:ml_model:Overall Precision: 0.49996588427947597
+INFO:ml_model:Overall Recall: 0.49998294155777695
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9694674717702043
+INFO:ml_model:Overall Precision: 0.8725851861347311
+INFO:ml_model:Overall Recall: 0.5962591803253554
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     28275
+           1       0.77      0.19      0.31      1038
+
+    accuracy                           0.97     29313
+   macro avg       0.87      0.60      0.65     29313
+weighted avg       0.96      0.97      0.96     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9889127690785658
+INFO:ml_model:Overall Precision: 0.9279039510902901
+INFO:ml_model:Overall Recall: 0.7103183315415684
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99     28808
+           1       0.87      0.42      0.57       505
+
+    accuracy                           0.99     29313
+   macro avg       0.93      0.71      0.78     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.999385937979736
+INFO:ml_model:Overall Precision: 0.6663937222790857
+INFO:ml_model:Overall Recall: 0.5293776303530696
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29296
+           1       0.33      0.06      0.10        17
+
+    accuracy                           1.00     29313
+   macro avg       0.67      0.53      0.55     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.999897656329956
+INFO:ml_model:Overall Precision: 0.499948828164978
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29310
+           1       0.00      0.00      0.00         3
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9934500051171835
+INFO:ml_model:Overall Precision: 0.4967588959776193
+INFO:ml_model:Overall Recall: 0.49996566287813754
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29123
+           1       0.00      0.00      0.00       190
+
+    accuracy                           0.99     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9977825538157131
+INFO:ml_model:Overall Precision: 0.49889127690785656
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29248
+           1       0.00      0.00      0.00        65
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9982942721659332
+INFO:ml_model:Overall Precision: 0.8563578474155626
+INFO:ml_model:Overall Recall: 0.5892173545769266
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29257
+           1       0.71      0.18      0.29        56
+
+    accuracy                           1.00     29313
+   macro avg       0.86      0.59      0.64     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9926994848701941
+INFO:ml_model:Overall Precision: 0.746551606405135
+INFO:ml_model:Overall Recall: 0.5278311905249016
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29099
+           1       0.50      0.06      0.10       214
+
+    accuracy                           0.99     29313
+   macro avg       0.75      0.53      0.55     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9969979190120425
+INFO:ml_model:Overall Precision: 0.4985329739688172
+INFO:ml_model:Overall Recall: 0.499965785061758
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29227
+           1       0.00      0.00      0.00        86
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9938934943540408
+INFO:ml_model:Overall Precision: 0.4970145689037497
+INFO:ml_model:Overall Recall: 0.4999313611092045
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29138
+           1       0.00      0.00      0.00       175
+
+    accuracy                           0.99     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.999897656329956
+INFO:ml_model:Overall Precision: 0.499948828164978
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29310
+           1       0.00      0.00      0.00         3
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9690580970900283
+INFO:ml_model:Overall Precision: 0.7845605295482462
+INFO:ml_model:Overall Recall: 0.5016167773093246
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     28405
+           1       0.60      0.00      0.01       908
+
+    accuracy                           0.97     29313
+   macro avg       0.78      0.50      0.50     29313
+weighted avg       0.96      0.97      0.95     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.99897656329956
+INFO:ml_model:Overall Precision: 0.6661890139883998
+INFO:ml_model:Overall Recall: 0.5172072309699541
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29284
+           1       0.33      0.03      0.06        29
+
+    accuracy                           1.00     29313
+   macro avg       0.67      0.52      0.53     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9987036468461092
+INFO:ml_model:Overall Precision: 0.4993518234230546
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29275
+           1       0.00      0.00      0.00        38
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 0.9857060007505203
+INFO:ml_model:Overall Precision: 0.8393982449908566
+INFO:ml_model:Overall Recall: 0.5597178874957407
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99     28864
+           1       0.69      0.12      0.20       449
+
+    accuracy                           0.99     29313
+   macro avg       0.84      0.56      0.60     29313
+weighted avg       0.98      0.99      0.98     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9997270835465493
+INFO:ml_model:Overall Precision: 0.49986354177327463
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29305
+           1       0.00      0.00      0.00         8
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9949510456111623
+INFO:ml_model:Overall Precision: 0.49747552280558116
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29165
+           1       0.00      0.00      0.00       148
+
+    accuracy                           0.99     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999317708866373
+INFO:ml_model:Overall Precision: 0.49996588544331866
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29311
+           1       0.00      0.00      0.00         2
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+INFO:ml_model:Error creating tree diagraph
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.994814587384437
+INFO:ml_model:Overall Precision: 0.4974072936922185
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     29161
+           1       0.00      0.00      0.00       152
+
+    accuracy                           0.99     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       0.99      0.99      0.99     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9986695322894279
+INFO:ml_model:Overall Precision: 0.49933476614471395
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29274
+           1       0.00      0.00      0.00        39
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+INFO:ml_model:Overall Accuracy: 1.0
+INFO:ml_model:Overall Precision: 1.0
+INFO:ml_model:Overall Recall: 1.0
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29313
+
+    accuracy                           1.00     29313
+   macro avg       1.00      1.00      1.00     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:No positive samples in y_true, true positive value should be meaningless
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9999658854433187
+INFO:ml_model:Overall Precision: 0.49998294272165933
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29312
+           1       0.00      0.00      0.00         1
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
+WARNING:py.warnings:Found `n_estimators` in params. Will use it instead of argument
+
+WARNING:py.warnings:'early_stopping_rounds' argument is deprecated and will be removed in a future release of LightGBM. Pass 'early_stopping()' callback via 'callbacks' argument instead.
+
+WARNING:py.warnings:'verbose_eval' argument is deprecated and will be removed in a future release of LightGBM. Pass 'log_evaluation()' callback via 'callbacks' argument instead.
+
+INFO:ml_model:Evaluating model
+WARNING:py.warnings:Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+WARNING:py.warnings:Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+INFO:ml_model:Overall Accuracy: 0.9992153651963293
+INFO:ml_model:Overall Precision: 0.4996076825981646
+INFO:ml_model:Overall Recall: 0.5
+INFO:ml_model:Classification report:               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     29290
+           1       0.00      0.00      0.00        23
+
+    accuracy                           1.00     29313
+   macro avg       0.50      0.50      0.50     29313
+weighted avg       1.00      1.00      1.00     29313
+
+WARNING:py.warnings:LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+
+INFO:ml_model:Feature importance of class: 1
