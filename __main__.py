@@ -20,7 +20,8 @@ log.info('Reading config files')
 config_path = "config/resources.yaml"
 config = read_yaml(config_path)
 genie = config["genie"]
-
+genie["models_path"] = genie["models_path"]+f"models_{ts}/"
+genie["models_metrics_file"] = genie["models_path"]+f"models_{ts}.csv"
 
 # Read synapses credentials
 secrets_path = ".secrets/synapses_credentials.yaml"
