@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import logging
 import os
-import pickle
 
 from utils import create_folder
 
@@ -62,28 +61,28 @@ def add_age(df_clinical_patient):
 
 
 def process_clinical_patient(df_clinical_patient, genie):
-    '''
+    """
         Process clinical_patient and add age columns
-    '''
+    """
     clinical_patient_file = genie["processed_data"]+genie["processed_files"]["clinical_patient"]["file_name"]
     if os.path.isfile(clinical_patient_file):
         log.info(f'Genie clinical_patient already created, skipping step')
         df_clinical_patient = pd.read_csv(clinical_patient_file,
-                                                       sep=";")
+                                          sep=";")
     else:
         df_clinical_patient = add_age(df_clinical_patient)
     return df_clinical_patient
 
 
 def process_clinical_sample(df_clinical_sample, genie):
-    '''
+    """
     Process clinical_sample and add age columns
-    '''
+    """
     clinical_sample_file = genie["processed_data"] + genie["processed_files"]["clinical_sample"]["file_name"]
     if os.path.isfile(clinical_sample_file):
         log.info(f'Genie clinical_sample already created, skipping step')
         df_clinical_sample = pd.read_csv(clinical_sample_file,
-                                          sep=";")
+                                         sep=";")
     else:
         df_clinical_sample["AGE_AT_SEQ_REPORT_DAYS"] = df_clinical_sample["AGE_AT_SEQ_REPORT_DAYS"].apply(clean_days)
         df_clinical_sample["AGE_AT_SEQ_REPORT"] = df_clinical_sample["AGE_AT_SEQ_REPORT_DAYS"].apply(lambda x: x//365)
@@ -91,14 +90,14 @@ def process_clinical_sample(df_clinical_sample, genie):
 
 
 def process_patient_cancer_types(df_clinical_sample, genie):
-    '''
+    """
     Process clinical_sample and generate one hot encoding with each patient_cancer_types as column
-    '''
+    """
     patient_cancer_types_file = genie["processed_data"] + genie["processed_files"]["patient_cancer_types"]["file_name"]
     if os.path.isfile(patient_cancer_types_file):
         log.info(f'Genie patient_cancer_types already created, skipping step')
         df_cs = pd.read_csv(patient_cancer_types_file,
-                                         sep=";")
+                            sep=";")
     else:
         df_cs = df_clinical_sample[["PATIENT_ID", "CANCER_TYPE"]].copy()
         df_cs = pd.get_dummies(df_cs.set_index('PATIENT_ID'), prefix='', prefix_sep='')
@@ -126,9 +125,9 @@ def group_by_chunk(df_mut, col_group, n_rows):
 
 
 def process_mutations_variants(df_mutation, genie):
-    '''
+    """
     Process mutations_extended and generate one hot encoding with each Hugo Symbols and variant type as column
-    '''
+    """
     mutations_extended_file = genie["processed_data"] + genie["processed_files"]["mutations_extended"]["file_name"]
     if os.path.isfile(mutations_extended_file):
         log.info(f'Genie mutations_extended already created, skipping step')
@@ -175,9 +174,9 @@ def save_cancer_types_columns(df):
 
 
 def process_mutations(df_mutation, genie):
-    '''
+    """
     Process mutations_extended and generate one hot encoding with each Hugo Symbols as column
-    '''
+    """
     mutations_extended_file = genie["processed_data"] + genie["processed_files"]["mutations_extended"]["file_name"]
     if os.path.isfile(mutations_extended_file):
         log.info(f'Genie mutations_extended already created, skipping step')
