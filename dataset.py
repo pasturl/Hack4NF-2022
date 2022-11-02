@@ -45,7 +45,7 @@ def save_dataset(genie, df):
 
 
 def create_dataset(genie):
-    dataset_file = f"{genie['dataset_path']}/dataset.csv"
+    dataset_file = f"{genie['dataset_path']}dataset.csv"
     if os.path.isfile(dataset_file):
         log.info(f'Reading dataset from: {dataset_file}')
         dataset = pd.read_csv(dataset_file, sep=";")

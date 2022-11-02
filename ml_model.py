@@ -115,15 +115,15 @@ def train_model(genie, ds, target):
     ds["SEX"] = ds["SEX"].apply(lambda x: 1 if x == "Female" else 0)
 
     X_trainable, X_test, y_trainable, y_test = train_test_split(ds[features], ds[target],
-                                                        test_size=0.10, random_state=42)
+                                                                test_size=0.10, random_state=42)
 
     X_train, X_validation, y_train, y_validation = train_test_split(X_trainable, y_trainable,
-                                                        test_size=0.20, random_state=42)
+                                                                    test_size=0.20, random_state=42)
 
     train_data = lgb.Dataset(X_train, label=y_train,
                              categorical_feature=genie['categorical_features'])
     validation_data = lgb.Dataset(X_validation, label=y_validation,
-                            categorical_feature=genie['categorical_features'])
+                                  categorical_feature=genie['categorical_features'])
 
     params_k = {
         'boosting_type': 'gbdt',

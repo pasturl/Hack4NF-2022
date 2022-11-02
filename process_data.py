@@ -133,7 +133,7 @@ def process_mutations_variants(df_mutation, genie):
     if os.path.isfile(mutations_extended_file):
         log.info(f'Genie mutations_extended already created, skipping step')
         df_mut_process = pd.read_csv(mutations_extended_file,
-                            sep=";")
+                                     sep=";")
     else:
         df_mut_var = df_mutation[["Hugo_Symbol", "Tumor_Sample_Barcode", "Variant_Type"]].copy()
         df_mut_var["Hugo_Symbol_variant"] = df_mut_var["Hugo_Symbol"] + "_" + df_mut_var["Variant_Type"]

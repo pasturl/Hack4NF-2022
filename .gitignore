@@ -1,6 +1,7 @@
 data
 models
 logs
+nlp
 .secrets
 .idea
 

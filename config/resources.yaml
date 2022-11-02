@@ -7,6 +7,9 @@ genie:
   dataset_path: 'data/'
   models_path: 'models/'
   training_mode: 'binary_classification'
+  nlp_path: 'nlp/'
+  nlp_thresholds_importance: 0.005
+  bert_min_topic_size: 3
   categorical_features: ['PRIMARY_RACE']
   targets: ['Adrenal Gland Cancer',
             'Bladder Cancer',
@@ -57,3 +60,5 @@ genie:
       file_name: 'patient_cancer_types.csv'
     mutations_extended:
       file_name: 'mutations_extended.csv'
+    gene_info:
+      file_name: 'gene_info.csv'
