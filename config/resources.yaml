@@ -8,7 +8,7 @@ genie:
   models_path: 'models/'
   training_mode: 'binary_classification'
   nlp_path: 'nlp/'
-  nlp_thresholds_importance: 0.005
+  nlp_thresholds_importance: 0.001
   bert_min_topic_size: 3
   categorical_features: ['PRIMARY_RACE']
   targets: ['Adrenal Gland Cancer',

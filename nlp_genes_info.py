@@ -77,15 +77,21 @@ def bertopic_to_important_genes(genie):
             log.info(f'Applying BERTopic to {target} model important features')
             model_path = genie["nlp_path"] + target
             create_folder(model_path)
-            df = read_importance_features(genie, target, df_genes)
-            df = clean_text(df, stopwords)
-            apply_bertopic(genie, df)
+            try:
+                df = read_importance_features(genie, target, df_genes)
+                df = clean_text(df, stopwords)
+                apply_bertopic(genie, df, model_path)
+            except:
+                log.info(f'Error applying BERTopic to {target} model important features')
 
     else:
         for target in genie["targets"]:
             log.info(f'Applying BERTopic to {target} model important features')
             model_path = genie["nlp_path"] + target
             create_folder(model_path)
-            df = read_importance_features(genie, target, df_genes)
-            df = clean_text(df, stopwords)
-            apply_bertopic(genie, df, model_path)
+            try:
+                df = read_importance_features(genie, target, df_genes)
+                df = clean_text(df, stopwords)
+                apply_bertopic(genie, df, model_path)
+            except:
+                log.info(f'Error applying BERTopic to {target} model important features')
