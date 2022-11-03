@@ -53,7 +53,9 @@ def apply_bertopic(genie, df, model_path):
     df_topic_model = topic_model.get_topic_info()
     df_topic_model.to_csv(f"{model_path}/bert_topics.csv",
                           sep=";", index=False)
-    barchart = topic_model.visualize_barchart(n_words=10, height=600)
+    barchart = topic_model.visualize_barchart(n_words=10,
+                                              height=600,
+                                              top_n_topics=50)
     barchart.write_html(f"{model_path}/bert_topic_words_score.html")
     topics = topic_model.visualize_topics()
     topics.write_html(f"{model_path}/bert_topics.html")
