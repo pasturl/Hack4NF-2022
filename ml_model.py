@@ -93,6 +93,7 @@ def model_interpretability(model_gbm, X_test, model_path):
 
 
 def train_model(genie, ds, target):
+    log.info(f'Training model for {target}')
     model_path = f"{genie['models_path']}model_{target}"
     create_folder(model_path)
     ds = ds.fillna(0)
@@ -113,6 +114,8 @@ def train_model(genie, ds, target):
 
     ds["PRIMARY_RACE"] = ds["PRIMARY_RACE"].astype('category')
     ds["SEX"] = ds["SEX"].apply(lambda x: 1 if x == "Female" else 0)
+
+    log.info(f'Target distribution {ds[target].value_counts}')
 
     X_trainable, X_test, y_trainable, y_test = train_test_split(ds[features], ds[target],
                                                                 test_size=0.10, random_state=42)
