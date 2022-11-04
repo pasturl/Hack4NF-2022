@@ -68,20 +68,18 @@ def evaluate_model(model, X_data, y_data, model_path, genie, target, split_set):
             fwrite.write(new_line)
 
 
-def model_interpretability(model_gbm, X_test, model_path):
+def model_interpretability(model_gbm, X_test, model_path, genie, target):
     try:
         tree_to_plot = 0
-        tree = lgb.create_tree_digraph(model_gbm, orientation="vertical", tree_index=tree_to_plot)
-        graphviz.Source(tree.source, filename=f'{model_path}/tree_{tree_to_plot}.gv', format="png")
+        tree = lgb.create_tree_digraph(model_gbm, orientation="vertical",
+                                       tree_index=tree_to_plot)
+        graphviz.Source(tree.source,
+                        filename=f'{model_path}/tree_{tree_to_plot}.gv',
+                        format="png")
     except:
         log.info('Error creating tree diagraph')
     shap_values = shap.TreeExplainer(model_gbm).shap_values(X_test)
     class_selected = 1
-    log.info(f'Feature importance of class: {class_selected}')
-    plt.figure()
-    fig = shap.summary_plot(shap_values[class_selected], X_test, max_display=100, show=False)
-    plt.savefig(f'{model_path}/shap_class_{class_selected}.png', dpi=150)
-    plt.close()
 
     shap_values_class_1 = np.abs(shap_values[1]).mean(0)
     features_shap = model_gbm.feature_name()
@@ -90,6 +88,54 @@ def model_interpretability(model_gbm, X_test, model_path):
     df_importances_shap["shap_value"] = shap_values_class_1
     df_importances_shap.sort_values("shap_value", inplace=True, ascending=False)
     df_importances_shap.to_csv(f'{model_path}/feature_importance_shap_lgb.csv', sep=";", index=False)
+
+    for max_display_shap in genie["max_display_shap_importance"]:
+        log.info(f'Top-{max_display_shap} feature importance of class: {class_selected}')
+        plt.figure()
+        fig_summary = shap.summary_plot(shap_values[class_selected],
+                                        X_test,
+                                        max_display=max_display_shap,
+                                        show=False)
+        plt.savefig(f'{model_path}/shap_class_{class_selected}_{max_display_shap}.png',
+                    dpi=150)
+        plt.close()
+
+    log.info(f'Bar plot feature importance of class: {class_selected}')
+    plt.figure()
+    fig_importance = shap.summary_plot(shap_values[class_selected],
+                                       X_test,
+                                       plot_type='bar',
+                                       show=False)
+    plt.savefig(f'{model_path}/shap_class_{class_selected}_bar_plot.png', dpi=150)
+    plt.close()
+
+    gene_mutations = genie["gene_mutations_shap_dependence"]
+    for gene_mutation in gene_mutations:
+        log.info(f'SHAP dependence plot: {gene_mutation}')
+        if gene_mutation == target:
+            log.info(
+                f'{gene_mutation} mutation is the target model {target}')
+            continue
+        shap_importance = df_importances_shap[df_importances_shap["feature"] == gene_mutation]["shap_value"].values[0]
+        if shap_importance < genie["gene_mutations_thresholds_importance"]:
+            log.info(f'{gene_mutation} mutation has a shap value of {shap_importance} \n It is not important for the '
+                     f'model')
+            continue
+        else:
+            try:
+                plt.figure()
+                fig_dependence = shap.dependence_plot(gene_mutation,
+                                                      shap_values[1],
+                                                      X_test.values,
+                                                      feature_names=X_test.columns,
+                                                      show=False)
+                plt.savefig(f'{model_path}/shap_dependence_plot_{gene_mutation}.png',
+                            dpi=150,
+                            show=False)
+                plt.close()
+                log.info(f'SHAP dependence plot: {gene_mutation} created')
+            except:
+                log.info(f'Error SHAP dependence plot: {gene_mutation}')
 
 
 def train_model(genie, ds, target):
@@ -115,7 +161,7 @@ def train_model(genie, ds, target):
     ds["PRIMARY_RACE"] = ds["PRIMARY_RACE"].astype('category')
     ds["SEX"] = ds["SEX"].apply(lambda x: 1 if x == "Female" else 0)
 
-    log.info(f'Target distribution {ds[target].value_counts}')
+    log.info(f'Target distribution \n {ds[target].value_counts()}')
 
     X_trainable, X_test, y_trainable, y_test = train_test_split(ds[features], ds[target],
                                                                 test_size=0.10, random_state=42)
@@ -150,6 +196,6 @@ def train_model(genie, ds, target):
 
     evaluate_model(model_gbm, X_test, y_test, model_path, genie, target, "test")
 
-    model_interpretability(model_gbm, X_test, model_path)
+    model_interpretability(model_gbm, X_test, model_path, genie, target)
 
     return model_gbm
