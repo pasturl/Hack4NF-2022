@@ -138,10 +138,19 @@ def model_interpretability(model_gbm, X_test, model_path, genie, target):
                 log.info(f'Error SHAP dependence plot: {gene_mutation}')
 
 
-def train_model(genie, ds, target):
-    log.info(f'Training model for {target}')
+def train_model(genie, datasets, target):
+    log.info(f"Training model for {target} at {genie['aggregation_level']} level")
     model_path = f"{genie['models_path']}model_{target}"
     create_folder(model_path)
+    if genie["aggregation_level"] == "patient":
+        log.info('Using dataset_by_patient')
+        ds = datasets["dataset_by_patient"]
+    elif genie["aggregation_level"] == "sample":
+        log.info('Using dataset_by_sample')
+        ds = datasets["dataset_by_sample"]
+    else:
+        raise Exception(f"aggregation_level not defined")
+
     ds = ds.fillna(0)
     # TODO parametrize path
     with open('data/genie_mutations_features.txt') as f:
@@ -156,7 +165,7 @@ def train_model(genie, ds, target):
     features = list(features)
 
     features = features + genie['categorical_features']
-    features = features + ['AGE_CONTACT']
+    features = features + genie['clinical_features']
 
     ds["PRIMARY_RACE"] = ds["PRIMARY_RACE"].astype('category')
     ds["SEX"] = ds["SEX"].apply(lambda x: 1 if x == "Female" else 0)
