@@ -27,7 +27,7 @@ log.info('Reading config files')
 config_path = "config/resources.yaml"
 config = read_yaml(config_path)
 genie = config["genie"]
-genie["models_path"] = genie["models_path"]+f"models_{ts}/"
+genie["models_path"] = genie["models_path"]+genie["aggregation_level"]+f"/models_{ts}/"
 genie["models_metrics_file"] = genie["models_path"]+f"models_{ts}.csv"
 
 # Read synapses credentials
@@ -45,11 +45,7 @@ if __name__ == "__main__":
     download_gene_info(genie)
 
     log.info('Creating dataset')
-    dataset = create_dataset(genie)
-
-    log.info('Filter out Na in target columns')
-    # TODO Analyze mutations informed by each study and clean in origin
-    dataset = dataset.dropna(subset=genie["targets"])
+    datasets = create_dataset(genie)
 
     if 'binary_classification' in genie["training_mode"]:
         log.info('Training ML supervised model binary classification')
@@ -58,9 +54,9 @@ if __name__ == "__main__":
             with open('data/genie_cancer_types_features.txt') as f:
                 cancer_types_cols = f.read().splitlines()
             for target in cancer_types_cols:
-                model_lgb = train_model(genie, dataset, target)
+                model_lgb = train_model(genie, datasets, target)
         else:
             for target in genie["targets"]:
-                model_lgb = train_model(genie, dataset, target)
+                model_lgb = train_model(genie, datasets, target)
 
     bertopic_to_important_genes(genie)

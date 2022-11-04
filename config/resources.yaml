@@ -7,6 +7,7 @@ genie:
   dataset_path: 'data/'
   models_path: 'models/'
   training_mode: 'binary_classification'
+  aggregation_level: 'sample' # patient or sample
   nlp_path: 'nlp/'
   max_display_shap_importance: [10, 25, 100]
   gene_mutations_thresholds_importance: 0.01
@@ -25,39 +26,9 @@ genie:
   nlp_thresholds_importance: 0.001
   bert_min_topic_size: 3
   categorical_features: ['PRIMARY_RACE']
+  clinical_features: ['AGE_CONTACT']
   targets: ['NF1_DEL',
-            'NF1_SNP',
-            'NF1_INS',
-            'NF2_DEL',
-            'NF2_SNP',
-            'NF2_INS',
-            'SMARCB1_DEL',
-            'SMARCB1_SNP',
-            'SMARCB1_INS',
-            'LZTR1_DEL',
-            'LZTR1_SNP',
-            'LZTR1_INS',
-            'Bladder Cancer',
-            'Breast Cancer',
-            'Cancer of Unknown Primary',
-            'CNS Cancer',
-            'Colorectal Cancer',
-            'Endometrial Cancer',
-            'Glioma',
-            'Head and Neck Cancer',
-            'Gastrointestinal Stromal Tumor',
-            'Leukemia',
-            'Melanoma',
-            'Mesothelioma',
-            'Nerve Sheath Tumor',
-            'Non-Small Cell Lung Cancer',
-            'Pancreatic Cancer',
-            'Peripheral Nervous System',
-            'Renal Cell Carcinoma',
-            'Salivary Gland Cancer',
-            'Skin Cancer, Non-Melanoma',
-            'Small Bowel Cancer',
-            'UNKNOWN']
+            'Breast Cancer',]
   files:
     clinical_patient:
       file_name: 'data_clinical_patient_13.3-consortium.txt'
@@ -78,6 +49,8 @@ genie:
       file_name: 'clinical_sample.csv'
     patient_cancer_types:
       file_name: 'patient_cancer_types.csv'
+    sample_cancer_types:
+      file_name: 'sample_cancer_types.csv'
     mutations_extended:
       file_name: 'mutations_extended.csv'
     gene_info:

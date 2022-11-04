@@ -108,6 +108,22 @@ def process_patient_cancer_types(df_clinical_sample, genie):
     return df_cs
 
 
+def process_sample_cancer_types(df_clinical_sample, genie):
+    """
+    Process clinical_sample and generate one hot encoding with each patient_cancer_types as column
+    """
+    patient_cancer_types_file = genie["processed_data"] + genie["processed_files"]["sample_cancer_types"]["file_name"]
+    if os.path.isfile(patient_cancer_types_file):
+        log.info(f'Genie sample_cancer_types already created, skipping step')
+        df_cs = pd.read_csv(patient_cancer_types_file,
+                            sep=";")
+    else:
+        df_cs = df_clinical_sample[["SAMPLE_ID", "CANCER_TYPE"]].copy()
+        df_cs = pd.get_dummies(df_cs.set_index('SAMPLE_ID'), prefix='', prefix_sep='')
+        df_cs.reset_index(inplace=True)
+    return df_cs
+
+
 def group_by_chunk(df_mut, col_group, n_rows):
     if len(df_mut) % n_rows != 0:
         chunks = len(df_mut)//n_rows+1
@@ -143,13 +159,13 @@ def process_mutations_variants(df_mutation, genie):
         df_mut_process = df_mut_process.sort_values("SAMPLE_ID")
         # This group by generate a memory error
         # So the groupby is done by chunk
-        # df_mut_process = df_mut_process.groupby("SAMPLE_ID", observed=True).max()
-        col_group = "SAMPLE_ID"
-        n_rows = 100000
-        df_mut_process = group_by_chunk(df_mut_process, col_group, n_rows)
-        # df_dd = dd.from_pandas(df_mut_process, npartitions=12)
-        # result = df_dd.groupby('SAMPLE_ID').max().reset_index().compute()
-        # df_mut_process.reset_index(inplace=True)
+        df_mut_process = df_mut_process.groupby("SAMPLE_ID", observed=True).max()
+        # TODO Memory problem, its needed more than 120GB RAM
+        # This function try to split the process but it doesn't work as expected'
+        # col_group = "SAMPLE_ID"
+        # n_rows = 100000
+        # df_mut_process = group_by_chunk(df_mut_process, col_group, n_rows)
+        df_mut_process.reset_index(inplace=True)
         save_mutations_columns(df_mut_process)
 
     return df_mut_process
@@ -217,6 +233,9 @@ def process_genie_data(genie):
 
     log.info('Processing clinical sample data to create patient_cancer_types')
     genie_process["patient_cancer_types"] = process_patient_cancer_types(genie_data["clinical_sample"], genie)
+
+    log.info('Processing clinical sample data to create sample_cancer_types')
+    genie_process["sample_cancer_types"] = process_sample_cancer_types(genie_data["clinical_sample"], genie)
 
     log.info('Processing mutations data')
     genie_process["mutations_extended"] = process_mutations_variants(genie_data["mutations_extended"], genie)
