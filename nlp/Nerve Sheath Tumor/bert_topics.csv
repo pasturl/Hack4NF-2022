@@ -1,0 +1,13 @@
+Topic;Count;Name
+-1;37;-1_entry_gene_receptor_human
+0;29;0_protein_analysis_expression_human
+1;19;1_entry_kinase_protein_pi
+2;10;2_histone_hdac_entry_transcription
+3;9;3_remodeling_chromatin_transcription_gene
+4;8;4_cell_ajs_summary_epithelial
+5;7;5_kinase_tyrosine_ddr_receptor
+6;5;6_int_ret_sarcoma_nras
+7;5;7_irs_receptor_insulin_entry
+8;4;8_checkpoint_stability_repair_brca
+9;4;9_ubiquitin_ligase_degradation_adaptor
+10;4;10_growth_erbb_receptor_tyrosine
