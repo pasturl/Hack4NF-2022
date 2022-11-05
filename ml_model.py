@@ -36,6 +36,11 @@ def plot_roc_curve(fpr, tpr, roc_auc, model_path, split_set):
 
 def evaluate_model(model, X_data, y_data, model_path, genie, target, split_set):
     y_pred = model.predict(X_data)
+    X_data["prediction"] = y_pred
+    X_data["target"] = target
+    X_data["split_set"] = split_set
+
+    X_data[["target", "split_set", "prediction"]].to_csv(f"{genie['models_metrics_file']}predictions_{target}_{split_set}.csv", sep=";", index=False)
     threshold = 0.5
     predictions = [1 if case > threshold else 0 for case in y_pred]
 
@@ -168,6 +173,7 @@ def train_model(genie, datasets, target):
     features = features + genie['clinical_features']
 
     ds["PRIMARY_RACE"] = ds["PRIMARY_RACE"].astype('category')
+    ds["PATIENT_ID"] = ds["PATIENT_ID"].astype('category')
     ds["SEX"] = ds["SEX"].apply(lambda x: 1 if x == "Female" else 0)
 
     log.info(f'Target distribution \n {ds[target].value_counts()}')
@@ -200,6 +206,8 @@ def train_model(genie, datasets, target):
                           num_boost_round=5000, early_stopping_rounds=25,
                           verbose_eval=50)
     joblib.dump(model_gbm, f'{model_path}/model_lgb.pkl')
+
+    evaluate_model(model_gbm, X_train, y_train, model_path, genie, target, "train")
 
     evaluate_model(model_gbm, X_validation, y_validation, model_path, genie, target, "validation")
 
