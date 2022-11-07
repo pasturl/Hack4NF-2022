@@ -53,13 +53,13 @@ The ML model is based On boosted decision tree algorithms. For the target defini
 
 #### Glioma SHAP feature importance
 The features are ranked by the SHAP importance value. The color represents the feature value, 
-red means high value, and blue low values of the feature. The X-axis has represented the impact
+red means high value, and blue low value of the feature. The X-axis has represented the impact
 on the model prediction. Some of the most important features:
 * **KRAS_SNP**: High values (which means SNP mutation) represent a lower probability of  glioma cancer.
-  This relation could not be check with any paper. In one research paper [by Guan, Qian, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8039792/),
+  This relation could not be checked with any paper. In one research paper [by Guan, Qian, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8039792/),
   individuals with KRAS rs7312175 GA genotype were more likely to develop glioma.
   Further research should be done. 
-* **TERT_SNP**: High values represent a higher probability of  glioma cancer.
+* **TERT_SNP**: High values represent a higher probability of glioma cancer.
   It is presented in [this paper by Mosrati, Mohamed Ali, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4599297/)
 * **IDH1_SNP**: High values represent a higher probability of glioma cancer.
   It is in line with what has been published [by Yan, Hai, et al.](https://www.nejm.org/doi/full/10.1056/NEJMoa0808710)
@@ -68,12 +68,12 @@ on the model prediction. Some of the most important features:
 
 
 ### NLP 
-The BERTopic model createS clusters of the most important genes using the OMIM info. The most relevant words for 
+The BERTopic model creates clusters of the most important genes using the OMIM info. The most relevant words for 
 each cluster are presented and the relations between the clusters.
 
 #### Relation between topics of most relevant genes for Glioma
 ![Glioma topic relation](static/image/glioma_matrix.png)
-#### Example of top words for 3 topics
+#### Example of top words for 4 topics
 ![Glioma topic words](static/image/glioma_words.png)
 
 ### Notebooks
