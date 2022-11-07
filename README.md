@@ -79,6 +79,8 @@ each cluster are presented and the relations between the clusters.
 ### Notebooks
 There are some notebooks with some analyzed and work in progress:
 * ANN_model_multiclass: Baseline model with multiclass and multilabel target
+* ANN_classifier_position_level: Proof of concept to train an ANN model at gene mutation position level. 
+  It should be further explored  
 * EDA_NF1_mutation_position: Exploratory Data Analysis (EDA) of the start-end position of NF1 mutation.
   The different regions where the mutations starts could be seen in this plot. This could be useful to 
   define more granular features, using the region where the mutations occur.
