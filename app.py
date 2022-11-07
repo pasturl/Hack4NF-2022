@@ -87,7 +87,7 @@ with st.expander("BERTopic analysis of important genes", expanded=False):
     print(source_code_heatmap)
     components.html(source_code_heatmap, height=800, scrolling=True)
 
-    st.markdown("#### Topic words score")
+    st.markdown("#### Hierarchical clustering")
     HtmlFile_hierarchy = open(f"nlp/{target}/bert_hierarchy.html", 'r', encoding='utf-8')
     source_code_hierarchy = HtmlFile_hierarchy.read()
     print(source_code_hierarchy)

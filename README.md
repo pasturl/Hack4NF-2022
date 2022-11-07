@@ -5,7 +5,7 @@
 The Challenge 1 propose “Use Genomics Evidence Neoplasia Information Exchange (GENIE) datasets to develop a new 
 framework that accurately uses genomic data to classify tumor samples for neurofibromatosis-related tumors.”
 
-Our team has developed a solution based in Machine Learning (ML) and Natural Language Processing (NLP) techniques
+Our team has developed a solution based on Machine Learning (ML) and Natural Language Processing (NLP) techniques
 * **[Online demo](https://pasturl-hack4nf-2022-app-o8lusi.streamlit.app/)**: It's an online application developed
   with [streamlit](https://streamlit.io/) that allow users interact with the trained ML model. The users can see
   the most relevant gene mutations to predict each type of cancer. Moreover, the most relevant genes are clustered 
@@ -14,11 +14,11 @@ Our team has developed a solution based in Machine Learning (ML) and Natural Lan
   presentation in the Hack4NF website.
 
 ## Pipeline
-1. **Download data**: Download genie data using synapse id to create structured csv files. To obtain gene info marvel API (http://marrvel.org/) is used to download data from OMIM (https://www.omim.org/)
-2. **Create dataset**: Transformed data to generate the dataset with all features. The process is parametrized to work at both levels, patient and sample.
-3. **Supervised ML model**: Train a supervised ML model to predict each cancer type using genomic features. LightGBM library from Microsoft is used to train the model.
+1. **Download data**: Download genie data using synapse id to create structured csv files. To obtain gene info [marvel API](http://marrvel.org/) is used to download data from [OMIM](https://www.omim.org/)
+2. **Create dataset**: Transform data to generate the dataset with all gene mutation features. The process is parametrized to work at both levels, patient, and sample.
+3. **Supervised ML model**: Train a supervised ML model to predict each cancer type or genetic mutation using genomic features. LightGBM library from Microsoft is used to train the model.
 4. **Model interpretability**: Use model explainability techniques (SHAP) to understand feature importance and its relation with the model prediction.
-5. **NLP**: Get gene info from marrvel and apply BERTopic, to cluster genes based in the OMIM info.
+5. **NLP**: Get gene info from marrvel and apply BERTopic, to cluster genes based on the OMIM info.
 
 The pipeline is parametrized in the config/resources.yaml file to allow easy experimentation. 
 Some relevant parameters:
@@ -42,19 +42,19 @@ The Genie raw data is processed to create the dataset with gene mutation feature
 The features of gene mutations are calculated considering which variant type is presented (i.e. NF1 DEL, 
 NF1 SNP, NF1 INS). It was evaluated the possibility of use the start-end position of the mutation, but the data at this
 level become too sparse. An alternative could be used the region of the gene (not the exact mutation position)
-to exact position.
+to exact position. The analysis could be seen on EDA_NF1_mutation_position notebook.
 
 ### ML model
-The ML model is based in boosted decision trees algorithms. For the target definition, two approaches were implemented:
+The ML model is based On boosted decision tree algorithms. For the target definition, two approaches were implemented:
 1. Use genetic mutations to predict the cancer (binary classification and multiclass).
 2. Use genetic mutations to predict other mutations without using the target
    as feature. It could help to understand gene mutation correlation 
    with NF1, NF2, SMARCB1 and LZTR1. 
 
 #### Glioma SHAP feature importance
-The features are ranked by the SHAP importance value. The color represent the feature value, 
-red means high value and blue low values of the feature. In the X axis is represented the impact
-in the model prediction. Some of the most important features:
+The features are ranked by the SHAP importance value. The color represents the feature value, 
+red means high value, and blue low values of the feature. The X-axis has represented the impact
+on the model prediction. Some of the most important features:
 * **KRAS_SNP**: High values (which means SNP mutation) represent a lower probability of  glioma cancer.
   This relation could not be check with any paper. In one research paper [by Guan, Qian, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8039792/),
   individuals with KRAS rs7312175 GA genotype were more likely to develop glioma.
@@ -68,7 +68,7 @@ in the model prediction. Some of the most important features:
 
 
 ### NLP 
-The BERTopic model create clusters of most important genes using the OMIM info. The most relevant words for 
+The BERTopic model createS clusters of the most important genes using the OMIM info. The most relevant words for 
 each cluster are presented and the relations between the clusters.
 
 #### Relation between topics of most relevant genes for Glioma
