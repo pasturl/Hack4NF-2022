@@ -1,4 +1,4 @@
-#[Hack4NF-2022](https://hack4nf-platform.bemyapp.com/#/event)
+# [Hack4NF-2022](https://hack4nf-platform.bemyapp.com/#/event)
 
 ![hack4NF](static/image/hack4NF.png)
 
