@@ -96,10 +96,10 @@ There are some notebooks with some analyzed and work in progress:
 * Evaluate how are handle multi samples from a patient
 * Implement a multiclass model
 * Develop an embedding of mutations to be used as pretrained model
-* Improve text cleaning adding more stopwords
+* Improve text cleaning by adding more stopwords
 * Review most important genes from each cancer type
-* Understand biological function of important genes
-* Evaluate possible genetic drug targets based in the important genes
+* Understand the biological function of important genes
+* Evaluate possible genetic drug targets based on the important genes
 
 # References
 * https://www.mskcc.org/cancer-care/types/neurofibromatosis/neurofibromatosis-type-1-nf1
