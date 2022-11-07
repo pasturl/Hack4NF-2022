@@ -24,7 +24,7 @@ The pipeline is parametrized in the config/resources.yaml file to allow easy exp
 Some relevant parameters:
 * **aggregation_level**: To define at which level train the model (patient or sample)
 * **targets**: List of cancer_types and/or genes to be defined as targets for the model.
-* **clinical_features**: List of clinical features to be used. In this case only age is used.
+* **clinical_features**: List of clinical features to be used. In this case, only age is used.
 * **categorical_features**: Features to be used as categorical (i.e. race).
 * **nlp_thresholds_importance**: Minimum SHAP importance value to use the gene in the NLP clustering step. 
   Higher values reduce the number of genes that are selected.   
@@ -36,13 +36,13 @@ Some relevant parameters:
 The Genie raw data is processed to create the dataset with gene mutation features at two different levels:
 * **Sample**: The same level at which the gene mutations are recorded in the data_mutation_extended file. In this dataset
   one patient could appear in several rows, one by sample. 
-* **Patient**: In this case, the dataset is aggregated at the patient level. A patient only appear at one row, 
+* **Patient**: In this case, the dataset is aggregated at the patient level. A patient only appear in one row, 
   and the mutation features are calculated considering all patient's samples.
 
 The features of gene mutations are calculated considering which variant type is presented (i.e. NF1 DEL, 
 NF1 SNP, NF1 INS). It was evaluated the possibility of use the start-end position of the mutation, but the data at this
 level become too sparse. An alternative could be used the region of the gene (not the exact mutation position)
-to exact position. The analysis could be seen on EDA_NF1_mutation_position notebook.
+to the exact position. The analysis could be seen on EDA_NF1_mutation_position notebook.
 
 ### ML model
 The ML model is based On boosted decision tree algorithms. For the target definition, two approaches were implemented:
