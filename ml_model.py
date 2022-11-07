@@ -36,11 +36,13 @@ def plot_roc_curve(fpr, tpr, roc_auc, model_path, split_set):
 
 def evaluate_model(model, X_data, y_data, model_path, genie, target, split_set):
     y_pred = model.predict(X_data)
-    X_data["prediction"] = y_pred
-    X_data["target"] = target
-    X_data["split_set"] = split_set
+    df_preds = pd.DataFrame()
+    df_preds["prediction"] = y_pred
+    df_preds = df_preds.round({'prediction': 4})
+    df_preds["target"] = target
+    df_preds["split_set"] = split_set
 
-    X_data[["target", "split_set", "prediction"]].to_csv(f"{model_path}predictions_{target}_{split_set}.csv", sep=";", index=False)
+    df_preds[["target", "split_set", "prediction"]].to_csv(f"{model_path}/predictions_{target}_{split_set}.csv", sep=";", index=False)
     threshold = 0.5
     predictions = [1 if case > threshold else 0 for case in y_pred]
 

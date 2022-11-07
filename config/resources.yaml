@@ -28,7 +28,38 @@ genie:
   categorical_features: ['PRIMARY_RACE']
   clinical_features: ['AGE_CONTACT']
   targets: ['NF1_DEL',
-            'Breast Cancer',]
+            'NF1_SNP',
+            'NF1_INS',
+            'NF2_DEL',
+            'NF2_SNP',
+            'NF2_INS',
+            'SMARCB1_DEL',
+            'SMARCB1_SNP',
+            'SMARCB1_INS',
+            'LZTR1_DEL',
+            'LZTR1_SNP',
+            'LZTR1_INS',
+            'Bladder Cancer',
+            'Breast Cancer',
+            'Cancer of Unknown Primary',
+            'CNS Cancer',
+            'Colorectal Cancer',
+            'Endometrial Cancer',
+            'Glioma',
+            'Head and Neck Cancer',
+            'Gastrointestinal Stromal Tumor',
+            'Leukemia',
+            'Melanoma',
+            'Mesothelioma',
+            'Nerve Sheath Tumor',
+            'Non-Small Cell Lung Cancer',
+            'Pancreatic Cancer',
+            'Peripheral Nervous System',
+            'Renal Cell Carcinoma',
+            'Salivary Gland Cancer',
+            'Skin Cancer, Non-Melanoma',
+            'Small Bowel Cancer',
+            'UNKNOWN']
   files:
     clinical_patient:
       file_name: 'data_clinical_patient_13.3-consortium.txt'

@@ -7,6 +7,7 @@ models_path = "trained_model/"
 df = pd.read_csv(f"{models_path}shap_importances_model_targets.csv", sep=";")
 
 targets = list(df["model_target"].unique())
+targets = [target.split("_")[1] for target in targets]
 features = list(df["feature"].unique())
 
 
@@ -46,9 +47,9 @@ st.markdown("")
 
 st.sidebar.image(img_main, width=240)
 feature_option = st.sidebar.selectbox("Feature", features, index=0)
-target_option = st.sidebar.selectbox("Model target", targets, index=0)
+target = st.sidebar.selectbox("Model target", targets, index=0)
 
-target = target_option.split("_")[1]
+target_option = "model_" + target
 
 with st.expander("Model feature importance using SHAP", expanded=False):
 
@@ -68,8 +69,16 @@ with st.expander("Model feature importance using SHAP", expanded=False):
 
 
 with st.expander("Model metrics", expanded=False):
-    model_lgb_test_auc = f"{models_path}{target_option}/model_lgb_test_auc.png"
-    st.image(model_lgb_test_auc, width=700)
+    splits = ["test", "validation"]
+    col1, col2 = st.columns(2)
+    with col1:
+        model_lgb_test_auc = f"{models_path}{target_option}/model_lgb_{splits[0]}_auc.png"
+        st.image(model_lgb_test_auc, caption=f"Area Under the Curve ROC for {splits[0]} split", width=400)
+    with col2:
+        model_lgb_val_auc = f"{models_path}{target_option}/model_lgb_{splits[1]}_auc.png"
+        st.image(model_lgb_val_auc, caption=f"Area Under the Curve ROC for {splits[1]} split", width=400)
+
+
 
 with st.expander("BERTopic analysis of important genes", expanded=False):
     st.markdown("#### Topic heatmap")

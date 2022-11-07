@@ -1,9 +1,7 @@
 Topic;Count;Name
--1;18;-1_irs_entry_protein_proteins
-0;30;0_protein_human_amino_domain
-1;12;1_notch_cell_entry_receptor
-2;7;2_mtnd_prime_wallace_ec
-3;7;3_cell_apc_il_torc
-4;6;4_ligase_ubiquitin_nfe_activity
-5;5;5_ercc_repair_dna_excision
-6;5;6_histone_methyltransferase_methylation_dot
+-1;9;-1_entry_mtnd_complex_af
+0;23;0_protein_human_entry_gene
+1;10;1_kinase_activity_subunit_domain
+2;9;2_hsp_entry_rna_proteins
+3;6;3_cell_proliferation_functions_signaling
+4;3;4_damage_fan_complex_dna

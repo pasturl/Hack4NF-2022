@@ -1,3 +1,12 @@
 Topic;Count;Name
-0;70;0_entry_protein_gene_dna
-1;7;1_histone_methylation_summary_gene
+-1;22;-1_slit_protein_erg_gene
+0;15;0_cell_entry_proteins_receptors
+1;15;1_receptor_entry_tyrosine_sequence
+2;13;2_dna_card_repair_entry
+3;12;3_pik_ptpases_subunit_kinase
+4;9;4_expression_amino_prex_detected
+5;8;5_chromatin_gene_remodeling_dicer
+6;8;6_methylation_histone_methyltransferase_transcriptional
+7;8;7_cbp_morf_runx_domain
+8;5;8_mtnd_wallace_nfe_ubiquitin
+9;4;9_xbp_ctcf_transcriptional_insulators
